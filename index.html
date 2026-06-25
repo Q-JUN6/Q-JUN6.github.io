@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人介绍网页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body {
+            background: #f0f0f2;
+            padding: 20px;
+        }
+        .container-box {
+            background: #e8e8eb;
+            max-width: 820px;
+            margin: 0 auto;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .container-title {
+            background: #ddd;
+            padding: 8px 16px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #222;
+        }
+        /* 通用板块样式 */
+        .section-wrap {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 28px;
+            color: #888;
+            padding: 6px 12px;
+        }
+        /* 顶部导航栏（桂花背景） */
+        .nav-bar {
+            width: 100%;
+            height: 140px;
+            background-image: url("img/osmanthus_bg.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .nav-tabs {
+            position: absolute;
+            bottom: 8px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-around;
+            color: #fff;
+            font-size: 14px;
+        }
+        /* 内容卡片 统一米黄色底色 */
+        .content-card {
+            background: #f7f0d8;
+            padding: 16px;
+        }
+        /* 首页板块 */
+        .home-card {
+            display: flex;
+            gap: 20px;
+        }
+        .avatar-box img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        .info-left {
+            flex: 1;
+        }
+        .info-right {
+            flex: 1;
+        }
+        .info-item {
+            line-height: 1.8;
+            font-size: 14px;
+        }
+        /* 我的家乡板块 */
+        .hometown-top-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            margin-bottom: 12px;
+        }
+        .hometown-text {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        /* 美食板块 */
+        .food-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 6px;
+        }
+        .food-grid img {
+            width: 100%;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 3px;
+        }
+        /* 学校板块 */
+        .school-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .school-left-img {
+            width: 220px;
+            height: 140px;
+            object-fit: cover;
+        }
+        .school-text {
+            flex: 1;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        .school-imgs-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .school-imgs-row img {
+            flex: 1;
+            height: 90px;
+            object-fit: cover;
+        }
+        /* 爱好板块 */
+        .hobby-imgs {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+        .hobby-imgs img {
+            width: 100%;
+            height: 80px;
+            object-fit: cover;
+        }
+        .hobby-text-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 6px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-box">
+        <div class="container-title">容器 1</div>
+
+        <!-- 首页板块 -->
+        <div class="section-wrap">
+            <div class="section-title">首页</div>
+            <div class="nav-bar">
+                <div class="nav-tabs">
+                    <span>首页</span>
+                    <span>我的家乡</span>
+                    <span>美食</span>
+                    <span>学校</span>
+                    <span>爱好</span>
+                </div>
+            </div>
+            <div class="content-card home-card">
+                <div class="avatar-box">
+                    <img src="img/avatar.png" alt="卡通头像">
+                </div>
+                <div class="info-left">
+                    <div class="info-item">姓名：秦李君</div>
+                    <div class="info-item">性别：女</div>
+                    <div class="info-item">生日：2007.02.16</div>
+                    <div class="info-item">星座：水瓶座</div>
+                    <div class="info-item">籍贯：河南省</div>
+                    <div class="info-item">专业：计算机应用技术</div>
+                </div>
+                <div class="info-right">
+                    <div class="info-item"><strong>自我介绍：</strong></div>
+                    <div class="info-item">本人性格开朗，待人温和真诚，喜静，善于观察，适应能力强</div>
+                    <div class="info-item" style="margin-top:12px"><strong>个性签名：</strong></div>
+                    <div class="info-item">看书的人，终会光芒万丈。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 我的家乡板块 -->
+        <div class="section-wrap">
+            <div class="section-title">我的家乡</div>
+            <div class="nav-bar">
+                <div class="nav-tabs">
+                    <span>首页</span>
+                    <span>我的家乡</span>
+                    <span>美食</span>
+                    <span>学校</span>
+                    <span>爱好</span>
+                </div>
+            </div>
+            <div class="content-card">
+               <img class="hometown-top-img" src="img/town.jpg" alt="南阳风景合集">
+                <p class="hometown-text">
+                    南阳古称宛，位于豫鄂陕交界，是河南面积最大的省辖市、国家历史文化名城。这里是“四圣”故里，东汉南都帝乡，古迹众多；地处南北气候过渡带，坐拥丹江湖、宝天曼、老界岭等山水，是南水北调中线水源地，兼有玉都、世界月季名城之称；物产丰富，交通便利，兼具北方厚重与南方温润。
+                </p>
+            </div>
+        </div>
+
+        <!-- 美食板块 -->
+        <div class="section-wrap">
+            <div class="section-title">美食</div>
+            <div class="nav-bar">
+                <div class="nav-tabs">
+                    <span>首页</span>
+                    <span>我的家乡</span>
+                    <span>美食</span>
+                    <span>学校</span>
+                    <span>爱好</span>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="food-grid">
+                    <img src="img/food1.jpg" alt="美食1">
+                    <img src="img/food2.jpg" alt="美食2">
+                    <img src="img/food3.jpg" alt="美食3">
+                    <img src="img/food4.jpg" alt="美食4">
+                    <img src="img/food5.jpg" alt="美食5">
+                    <img src="img/food6.jpg" alt="美食6">
+                    <img src="img/food7.jpg" alt="美食7">
+                    <img src="img/food8.jpg" alt="美食8">
+                </div>
+            </div>
+        </div>
+
+        <!-- 学校板块 -->
+        <div class="section-wrap">
+            <div class="section-title">学校</div>
+            <div class="nav-bar">
+                <div class="nav-tabs">
+                    <span>首页</span>
+                    <span>我的家乡</span>
+                    <span>美食</span>
+                    <span>学校</span>
+                    <span>爱好</span>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="school-row">
+                    <img class="school-left-img" src="img/s1.jpg" alt="学校全景">
+                    <p class="school-text">
+                        我就读的学校位于南阳市城乡示范区大道滨湖西区，地理位置优越，周边有地铁和商圈，生活很方便。学校占地500亩，是公办性质，实行统招省教育主管、河南开放大学共管的体制，依托原南阳职业学院和河南开放大学优质教育资源，实行“一套机构、两块牌子”的运行模式。
+                    </p>
+                </div>
+                <div class="school-imgs-row">
+                    <img src="img/s2.jpg" alt="校园教学楼">
+                    <img src="img/s3.jpg" alt="校园道路">
+                    <img src="img/s4.jpg" alt="校园晚霞">
+                </div>
+            </div>
+        </div>
+
+        <!-- 爱好板块 -->
+        <div class="section-wrap>
+            <div class="section-title">爱好</div>
+            <div class="nav-bar">
+                <div class="nav-tabs">
+                    <span>首页</span>
+                    <span>我的家乡</span>
+                    <span>美食</span>
+                    <span>学校</span>
+                    <span>爱好</span>
+                </div>
+            </div>
+            <div class="content-card">
+                <div class="hobby-imgs">
+                    <img src="img/h-movie.jpg" alt="看电影">
+                    <img src="img/h-travel.jpg" alt="旅行">
+                    <img src="img/h-book.jpg" alt="读书">
+                    <img src="img/h-run.jpg" alt="跑步">
+                    <img src="img/h-music.jpg" alt="听音乐">
+                </div>
+                <div class="hobby-text-row">
+                    <div>
+                        <strong>看电影</strong>
+                        <p>放松解压，体验多样人生，情绪相处乐趣</p>
+                    </div>
+                    <div>
+                        <strong>旅行</strong>
+                        <p>开阔眼界，感受不同风土，放松身心</p>
+                    </div>
+                    <div>
+                        <strong>读书</strong>
+                        <p>增长知识，沉淀思维，丰富内心</p>
+                    </div>
+                    <div>
+                        <strong>跑步</strong>
+                        <p>增强体质，释放负面情绪，提升精气神</p>
+                    </div>
+                    <div>
+                        <strong>听音乐</strong>
+                        <p>舒缓情绪，安抚心灵，缓解疲惫</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
